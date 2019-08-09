@@ -30,12 +30,12 @@ public class ResSvc : MonoBehaviour
    public void LoadSceneAsync(string sceneName,Action loadAction)
     {
 
-        GameRoot.Instance.LoadingWindow.SetWindowState(true);
+        GameRoot.Instance.loadingWindow.SetWindowState(true);
         AsyncOperation asyncOperation= SceneManager.LoadSceneAsync(sceneName);
         callBack = () =>
         {
             float value = asyncOperation.progress;
-            GameRoot.Instance.LoadingWindow.SetProgress(value);
+            GameRoot.Instance.loadingWindow.SetProgress(value);
             if (value == 1)
             {
                 if (loadAction!=null)
@@ -44,12 +44,32 @@ public class ResSvc : MonoBehaviour
                 }
                 asyncOperation = null;
                 callBack=null;
-                GameRoot.Instance.LoadingWindow.SetWindowState(false);
+                GameRoot.Instance.loadingWindow.SetWindowState(false);
             }
 
         };
     }
+    private Dictionary<string,AudioClip> audioClipDic=new Dictionary<string, AudioClip>();
+    public AudioClip LoadAudioClip(string name, bool isCache)
+    {
+        AudioClip audioClip = null;
+        string loadPath = "AudioClip/" + name;
+        if (!audioClipDic.TryGetValue(loadPath,out audioClip))
+        {
+            audioClip = Resources.Load<AudioClip>(loadPath);
+            if (audioClip==null)
+            {
+                Debug.Log("找不到对应的音频文件"+loadPath);
+                return null;
+            }
+            if (isCache)
+            {
+               audioClipDic.Add(loadPath,audioClip);
+            }
+        }
+        return audioClip;
 
+    }
     void Update()
     {
         if (callBack!=null)

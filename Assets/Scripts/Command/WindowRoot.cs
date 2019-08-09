@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WindowRoot : MonoBehaviour {
 
 	protected  ResSvc resSvc=null;
-
+    protected AudioSvc audioSvc = null;
     public void SetWindowState(bool isActive)
     {
         gameObject.SetActive(isActive);
@@ -23,10 +23,12 @@ public class WindowRoot : MonoBehaviour {
     protected virtual void Init()
     {
         resSvc = ResSvc.Instance;
+        audioSvc = AudioSvc.Instance;
     }
     protected virtual void Exit()
     {
         resSvc = null;
+        audioSvc = null;
     }
     #region Tool Funtions
 
