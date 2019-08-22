@@ -314,6 +314,7 @@
     <Compile Include="Assets\Scripts\Server\AudioSvc.cs" />
     <Compile Include="Assets\Scripts\Server\ResSvc.cs" />
     <Compile Include="Assets\Scripts\System\LoginSys.cs" />
+    <Compile Include="Assets\Scripts\UIWindows\CreatWindow.cs" />
     <Compile Include="Assets\Scripts\UIWindows\DynamicWindow.cs" />
     <Compile Include="Assets\Scripts\UIWindows\LoadingWindow.cs" />
     <Compile Include="Assets\Scripts\UIWindows\LoginWindow.cs" />

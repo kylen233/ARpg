@@ -416,6 +416,22 @@ MonoBehaviour:
   btn_Enter: {fileID: 498367205}
   inputField_account: {fileID: 388471845}
   inputField_password: {fileID: 409202702}
+--- !u!1 &429799748 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1690851542479128, guid: 1b11c8fb4f651b34bbc00f2c7d06ecb5,
+    type: 2}
+  m_PrefabInternal: {fileID: 53115835}
+--- !u!114 &429799751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429799748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef23d7a2e1cece14fa038864b240d2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!111 &467532928 stripped
 Animation:
   m_PrefabParentObject: {fileID: 111473928216131372, guid: 873a277ccdbd2b74787cbefa55649758,
@@ -654,6 +670,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 818372012}
     m_Modifications:
+    - target: {fileID: 114689809044473794, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114342264244673726, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224841660574773430, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -757,6 +783,56 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: 3434
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689809044473794, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689809044473794, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689809044473794, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 413251795}
+    - target: {fileID: 114689809044473794, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickNoticeBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689809044473794, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114342264244673726, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114342264244673726, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114342264244673726, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 413251795}
+    - target: {fileID: 114342264244673726, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickEnterBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 114342264244673726, guid: 9ad5f0bd036700f4ba91899f2b5132a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ad5f0bd036700f4ba91899f2b5132a9, type: 2}
@@ -952,6 +1028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loginWindow: {fileID: 413251795}
+  creatWindow: {fileID: 429799751}
 --- !u!114 &1585637301
 MonoBehaviour:
   m_ObjectHideFlags: 0

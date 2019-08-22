@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Resources/Scenes/GameRoot.unity
     guid: 4d656c74c32a5ee43bcd381e231a9ea6
   - enabled: 1
-    path: Assets/Resources/SceneLogin.unity
+    path: Assets/Resources/Scenes/SceneLogin.unity
     guid: e1b4fc3ef0facd842a3ecbe301960fc4

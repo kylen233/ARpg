@@ -16,7 +16,7 @@ public class LoginWindow : WindowRoot
     protected override void Init()
     {
         base.Init();
-        
+        //更新本地存储的账号密码
         if (PlayerPrefs.HasKey("Account")&&PlayerPrefs.HasKey("Password"))
         {
             inputField_account.text = PlayerPrefs.GetString("Account");
@@ -28,5 +28,28 @@ public class LoginWindow : WindowRoot
             inputField_password.text = "";
         }
     }
-    //更新本地存储的账号密码
+
+    public void ClickEnterBtn()
+    {
+        string Account = inputField_account.text;
+        string Password = inputField_password.text;
+        audioSvc.PlayUIMusic(Constants.UILoginBtn);
+        if (Account!=""&&Password!="")
+        {
+            //更新本地存储的账号密码
+            PlayerPrefs.SetString("Account",Account);
+            PlayerPrefs.SetString("Password",Password);
+        }
+        //发送网络消息
+
+        //ToRemove
+        LoginSys.Instance.RepLogin();
+    }
+
+    public void ClickNoticeBtn()
+    {
+        audioSvc.PlayUIMusic(Constants.UIClickBtn);
+        GameRoot.AddTips("功能正在开发中");
+    }
+    
 }
